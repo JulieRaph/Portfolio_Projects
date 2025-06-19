@@ -13,6 +13,9 @@
             Mon expertise couvre une variété de technologies, notamment <span class="text-highlight-2">HTML, CSS, JavaScript, Vue.js et Node.js</span>.
             Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et grandir en tant que développeuse.
         </p>
+        <p><RouterLink to="/contact/1">Contactez moi</RouterLink></p>
+        <p><RouterLink to="/contact/2">Contactez le support</RouterLink></p>
+        <p><RouterLink to="/contact/3">Contactez le SAV</RouterLink></p>
     </div>
 </template>
 
