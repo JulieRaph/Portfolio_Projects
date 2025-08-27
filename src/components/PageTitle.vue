@@ -5,7 +5,7 @@
 
 <template>
     <div id="top-line">
-        <img id="profile-img" src="../assets/me.png" alt="me" width="300px" height="300px" />
+        <img id="profile-img" src="../assets/me.png" alt="me" width="270px" height="340px" />
         <div id="line">
             <p>Je suis <span class="text-highlight-1">Julie TOLVE</span>, <br/>
                     Développeuse Web.</p>
