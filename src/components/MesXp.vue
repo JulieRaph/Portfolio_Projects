@@ -97,7 +97,7 @@ const ShowXp = (id) => {
     }
 
     .active {
-        border-left: 4px solid var(--vt-c-custom_text_2);
+        border-left: 4px solid var(--vt-c-custom-text-2);
         color: var(--vt-c-custom-text-2);
     }
 
