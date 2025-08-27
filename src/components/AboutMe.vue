@@ -22,7 +22,7 @@
 
 <style scoped>
     #about-me {
-        margin-top: 40px;
+        margin-top: 100px;
     }
 
     .default-text {
