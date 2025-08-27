@@ -13,14 +13,20 @@
             <div class="techno-container"><i class="techno-icon devicon-nodejs-plain"></i> <br/> <span>Node.js</span></div>
             <div class="techno-container"><i class="techno-icon devicon-mongodb-plain"></i> <br/> <span>MongoDB</span></div>
             <div class="techno-container"><i class="techno-icon devicon-git-plain"></i> <br/> <span>Git</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-bootstrap-plain"></i> <br/> <span>Bootstrap</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-flask-plain"></i> <br/> <span>Flask</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-python-plain"></i> <br/> <span>Python</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-c-plain"></i> <br/> <span>Langage C</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-vscode-plain"></i> <br/> <span>VSCode</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-mysql-plain"></i> <br/> <span>MySql</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-csharp-plain"></i> <br/> <span>C#</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-gimp-plain"></i> <br/> <span>Gimp</span></div>
         </div>
     </div>
 </template>
 
 <style scoped>
     #skills {
-        margin-top: 40px;
+        margin-top: 90px;
     }
 
     #icons-list {
@@ -29,7 +35,7 @@
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 5px;
         grid-row-gap: 50px;
-        margin-top: 35px;
+        margin-top: 50px;
     }
 
     .techno-container {
