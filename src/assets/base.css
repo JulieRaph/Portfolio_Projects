@@ -21,9 +21,10 @@
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 
   /* Variables custom */
-  --vt-c-custom-dark-1: #222538;
-  --vt-c-custom-text-1: #81aaff;
-  --vt-c-custom-text-2: #e27e7f;
+  --vt-c-custom-dark-1: #1a1d29;
+  --vt-c-custom-text-1: #64ffda;
+  --vt-c-custom-text-2: #ff6b6b;
+  --vt-c-custom-text-normal: #e2e8f0;
 }
 
 /* semantic color variables for this project */
@@ -36,7 +37,7 @@
   --color-border-hover: var(--vt-c-divider-light-1);
 
   --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-custom-text-normal);
 
   --section-gap: 160px;
 }
@@ -51,7 +52,7 @@
     --color-border-hover: var(--vt-c-divider-dark-1);
 
     --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-text: var(--vt-c-custom-text-normal);
   }
 }
 
