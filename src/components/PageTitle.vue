@@ -11,7 +11,10 @@
                     Développeuse Web.</p>
             <div id="social">
                 <a href="https://www.linkedin.com/in/julie-tolve/" target="_blank">
-                    <img class="social-img" src="../assets/in.png" alt="linkedin" width="32px"/> 
+                    <img class="social-img linkedin-img" src="../assets/in.png" alt="linkedin"/> 
+                </a>
+                <a href="https://github.com/JulieRaph/" target="_blank">
+                    <img class="social-img github-img" src="../assets/github.png" alt="github"/> 
                 </a>
             </div>
         </div>
@@ -47,11 +50,30 @@
 
     #social {
         margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 20px;
     }
 
     .social-img {
-        margin-right: 10px;
-        filter: opacity(0.8);
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+    }
+
+    .linkedin-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .github-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-img:hover {
+        opacity: 1;
     }
 
     @media screen and (max-width: 905px) {
