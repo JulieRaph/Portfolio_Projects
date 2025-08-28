@@ -20,6 +20,7 @@
             <div class="techno-container"><i class="techno-icon devicon-mysql-plain"></i> <br/> <span>MySql</span></div>
             <div class="techno-container"><i class="techno-icon devicon-csharp-plain"></i> <br/> <span>C#</span></div>
             <div class="techno-container"><i class="techno-icon devicon-gimp-plain"></i> <br/> <span>Gimp</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-typescript-plain"></i> <br/> <span>Typescript</span></div>
         </div>
     </div>
 </template>
