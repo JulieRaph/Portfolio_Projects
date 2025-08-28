@@ -20,10 +20,10 @@
                 <p><RouterLink to="/contact/1">Contactez moi</RouterLink></p>
             </div>
             <div class="card">
-                <p><RouterLink to="/contact/2">Contactez le support</RouterLink></p>
+                <p><RouterLink to="/contact/2">Certifications</RouterLink></p>
             </div>
             <div class="card">
-                <p><RouterLink to="/contact/3">Contactez le SAV</RouterLink></p>
+                <p><RouterLink to="/contact/3">Liens</RouterLink></p>
             </div>
         </div>
     </div>
