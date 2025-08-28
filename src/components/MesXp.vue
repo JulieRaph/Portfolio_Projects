@@ -6,25 +6,28 @@ let activeBloc = ref(0)
 
 let experiences = ref([
 {
-    title: "Développeuse Web - FullStack",
-    date: "Depuis 2021",
-    line1: "Compétences numéro 1.",
-    line2: "Compétences numéro 2.",
-    line3: "Compétences numéro 3."
+    title: "Conceptrice et Développeuse Web et Application",
+    date: "De 2024 à 2025",
+    line1: "Création d'un site communautaire d'évènements ciblés : Python, Flask, API RESTFul, MySql, Vue.js",
+    line2: "Création d'un site de location de logements : Python, Flask, API, Javascript, HTML, CSS",
+    line3: "Création personnalisée de la commande 'printf' avec gestion des specifiers en Langage C",
+    line4: "Création personnalisée d'un interpréteur de commande en Langage C"
 },
 {
-    title: "Développeuse Web - Cybersécurité",
-    date: "2019 - 2021",
-    line1: "Compétences numéro 1.",
-    line2: "Compétences numéro 2.",
-    line3: "Compétences numéro 3."
+    title: "Assistante de Programme / Direction",
+    date: "De 2021 à 2024",
+    line1: "Suivi administratif et juridique des opérations immobilières",
+    line2: "Gestion des concessionnaires et de tous corps d'état",
+    line3: "Gestion comptabilité",
+    line4: "Relation Client et SAV"
 },
 {
-    title: "Assistante de direction",
-    date: "2015 - 2019",
-    line1: "Compétences numéro 1.",
-    line2: "Compétences numéro 2.",
-    line3: "Compétences numéro 3."
+    title: "Responsable de Magasin",
+    date: "De 2008 à 2024",
+    line1: "Développement du Chiffre d'Affaires avec analyse des indicateurs",
+    line2: "Management : Encadrement et accompagnement d'une équipe d'au moins 5 personnes et recrutement",
+    line3: "Gestion des stocks et du magasin dans les attentes de la Direction",
+    line4: "Relation Client et Fidélisation"
 }
 ]);
 
@@ -38,9 +41,9 @@ const ShowXp = (id) => {
     <div id="xp">
         <h2 class="text-highlight-1 section-title">Mes expériences</h2>
         <div id="left">
-            <p :class="activeBloc === 0 ? 'active' : ''" class="company fw600" @click="ShowXp(0)">Société n°1</p>
-            <p :class="activeBloc === 1 ? 'active' : ''" class="company fw600" @click="ShowXp(1)">Société n°2</p>
-            <p :class="activeBloc === 2 ? 'active' : ''" class="company fw600" @click="ShowXp(2)">Société n°3</p>
+            <p :class="activeBloc === 0 ? 'active' : ''" class="company fw600" @click="ShowXp(0)">Holberton School</p>
+            <p :class="activeBloc === 1 ? 'active' : ''" class="company fw600" @click="ShowXp(1)">Promotion immobilières</p>
+            <p :class="activeBloc === 2 ? 'active' : ''" class="company fw600" @click="ShowXp(2)">Maison Parisienne Haut de Gamme</p>
         </div>
         <div id="right">
             <template v-for="(job,index) in experiences">
@@ -48,9 +51,10 @@ const ShowXp = (id) => {
                     <h3 class="fw600">{{job.title}}</h3>
                     <span id="date">{{job.date}}</span>
                     <br/>
-                    <p class="fw600 mtb8" style="margin-top: 10px;"><span class="text-highlight-2">Ok</span> {{ job.line1 }}</p>
-                    <p class="fw600 mtb8"><span class="text-highlight-2">Ok</span> {{ job.line2 }}</p>
-                    <p class="fw600 mtb8"><span class="text-highlight-2">Ok</span> {{ job.line3 }}</p>
+                    <p class="fw600 mtb8" style="margin-top: 10px;"><span class="text-highlight-2">✓</span> {{ job.line1 }}</p>
+                    <p class="fw600 mtb8"><span class="text-highlight-2">✓</span> {{ job.line2 }}</p>
+                    <p class="fw600 mtb8"><span class="text-highlight-2">✓</span> {{ job.line3 }}</p>
+                    <p class="fw600 mtb8"><span class="text-highlight-2">✓</span> {{ job.line4 }}</p>
                 </div>
             </template>
         </div>  
@@ -60,7 +64,7 @@ const ShowXp = (id) => {
 
 <style scoped>
     #xp {
-        margin-top: 0px;
+        margin-top: 90px;
     }
 
     #xp #left {
