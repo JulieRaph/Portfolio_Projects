@@ -36,7 +36,7 @@
     const isElemVisible = (el) => {
         const rect = el.getBoundingClientRect()
         const elemTop = rect.top + 200
-        const elemBottom = rect.elemBottom
+        const elemBottom = rect.Bottom
         return elemTop < window.innerHeight && elemBottom >= 0
     }
 
@@ -59,12 +59,12 @@
             </a>
         </div>
         <div class="right fade-in">
-            <p class="tag" v-for="tag in getProjectTags()">{{ tag}}</p>
+            <p class="tag" v-for="tag in getProjectTags()">{{ tag }}</p>
             <p class="description">
                 {{ project.description }}
             </p>
             <p class="tasks">
-                <span v-for="task in getProjectTasks()"><span class="text-highlight-2">Ok</span> {{ task }}<br/></span>
+                <span v-for="task in getProjectTasks()"><span class="text-highlight-2">▶</span> {{ task }}<br/></span>
             </p>
         </div>
     </div>
@@ -87,7 +87,8 @@
     }
 
     .project .left img {
-        width: 100%;
+        width: 50%;
+        margin-top: 30px;
     }
 
     .project .right {
@@ -106,7 +107,7 @@
 
     .project .right .description {
         clear: both;
-        margin-top: 50px;
+        margin-top: 80px;
         font-size: 17px;
     }
 
