@@ -31,6 +31,7 @@
     #top-line #profile-img {
         float: left;
         margin-right: 50px;
+        border-radius: 45px;
     }
 
     #top-line #line {
