@@ -4,6 +4,7 @@
     import MesTechnos from '@/components/MesTechnos.vue';
     import MesXp from '@/components/MesXp.vue';
     import MesProjets from '@/components/MesProjets.vue';
+    import InfosPlus from '@/components/InfosPlus.vue';
 
 </script>
 
@@ -14,6 +15,7 @@
         <MesTechnos />
         <MesXp />
         <MesProjets />
+        <InfosPlus />
     </div>
 </template>
 
