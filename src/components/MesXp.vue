@@ -6,28 +6,28 @@ let activeBloc = ref(0)
 
 let experiences = ref([
 {
-    title: "Conceptrice et Développeuse Web et Application",
+    title: "Développeuse Web - Projets Applicatifs",
     date: "De 2024 à aujourd'hui",
-    line1: "Création d'un site communautaire d'évènements ciblés : Python, Flask, API RESTFul, MySql, Vue.js",
-    line2: "Création d'un site de location de logements : Python, Flask, API, Javascript, HTML, CSS",
-    line3: "Création personnalisée de la commande 'printf' avec gestion des specifiers en Langage C",
-    line4: "Création personnalisée d'un interpréteur de commande en Langage C"
+    line1: "Réalisation de projets web et applicatifs variés, du prototype à la mise en production",
+    line2: "Participation à toutes les étapes, en appliquant la méthodologie AGILE : analyse des besoins, conception, développement et déploiement",
+    line3: "Développement de solutions robustes et évolutives, avec un code structuré et facilement maintenable",
+    line4: "Collaboration avec clients et utilisateurs pour créer des interfaces intuitives et performantes"
 },
 {
-    title: "Assistante de Programme / Direction",
+    title: "Assistante de Programmes / Direction",
     date: "De 2021 à 2024",
-    line1: "Suivi administratif et juridique des opérations immobilières",
-    line2: "Gestion des concessionnaires et de tous corps d'état",
-    line3: "Gestion comptabilité",
-    line4: "Relation Client et SAV"
+    line1: "Suivi administratif et juridique des opérations immobilières, garantissant conformité",
+    line2: "Coordination avec les concessionnaires et tous corps d'état pour assurer la bonne réalisation des projets",
+    line3: "Gestion comptable et suivi budgétaire précis",
+    line4: "Relation Clients et Suivi après-vente, garantissant la satisfaction"
 },
 {
     title: "Responsable de Magasin",
     date: "De 2008 à 2024",
     line1: "Développement du Chiffre d'Affaires avec analyse des indicateurs",
     line2: "Management : Encadrement et accompagnement d'une équipe d'au moins 5 personnes et recrutement",
-    line3: "Gestion des stocks et du magasin dans les attentes de la Direction",
-    line4: "Relation Client et Fidélisation"
+    line3: "Orientation client : anticipation des besoins et amélioration continue de l’expérience client",
+    line4: "Gestion d'un point de vente, avec des projets opérationnels avec organisation et orientation client"
 }
 ]);
 
@@ -39,9 +39,9 @@ const ShowXp = (id) => {
 
 <template>
     <div id="xp">
-        <h2 class="text-highlight-1 section-title">Mes expériences</h2>
+        <h2 class="text-highlight-1 section-title">Parcours professionnel</h2>
         <div id="left">
-            <p :class="activeBloc === 0 ? 'active' : ''" class="company fw600" @click="ShowXp(0)">Holberton School</p>
+            <p :class="activeBloc === 0 ? 'active' : ''" class="company fw600" @click="ShowXp(0)">Développeuse Web</p>
             <p :class="activeBloc === 1 ? 'active' : ''" class="company fw600" @click="ShowXp(1)">Promotion immobilières</p>
             <p :class="activeBloc === 2 ? 'active' : ''" class="company fw600" @click="ShowXp(2)">Maison Parisienne Haut de Gamme</p>
         </div>
