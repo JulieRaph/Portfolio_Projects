@@ -4,23 +4,27 @@
 
 <template>
     <div id="skills">
-        <h2 class="text-highlight-1 section-title">Mes technos préférées</h2>
+        <h2 class="text-highlight-1 section-title">Technologies & Outils</h2>
         <div id="icons-list">
+            <!--Frontend-->
             <div class="techno-container"><i class="techno-icon devicon-vuejs-plain"></i> <br/> <span>Vue.js</span></div>
             <div class="techno-container"><i class="techno-icon devicon-javascript-plain"></i> <br/> <span>JavaScript</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-typescript-plain"></i> <br/> <span>Typescript</span></div>
             <div class="techno-container"><i class="techno-icon devicon-html5-plain"></i> <br/> <span>HTML5</span></div>
             <div class="techno-container"><i class="techno-icon devicon-css3-plain"></i> <br/> <span>CSS3</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-nodejs-plain"></i> <br/> <span>Node.js</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-mongodb-plain"></i> <br/> <span>MongoDB</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-git-plain"></i> <br/> <span>Git</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-flask-plain"></i> <br/> <span>Flask</span></div>
+            <!--Backend-->
             <div class="techno-container"><i class="techno-icon devicon-python-plain"></i> <br/> <span>Python</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-flask-plain"></i> <br/> <span>Flask</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-nodejs-plain"></i> <br/> <span>Node.js</span></div>
             <div class="techno-container"><i class="techno-icon devicon-c-plain"></i> <br/> <span>Langage C</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-vscode-plain"></i> <br/> <span>VSCode</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-mysql-plain"></i> <br/> <span>MySql</span></div>
             <div class="techno-container"><i class="techno-icon devicon-csharp-plain"></i> <br/> <span>C#</span></div>
+            <!--Base de Données-->
+            <div class="techno-container"><i class="techno-icon devicon-mysql-plain"></i> <br/> <span>MySql</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-mongodb-plain"></i> <br/> <span>MongoDB</span></div>
+            <!--Autres-->
+            <div class="techno-container"><i class="techno-icon devicon-git-plain"></i> <br/> <span>Git</span></div>
+            <div class="techno-container"><i class="techno-icon devicon-vscode-plain"></i> <br/> <span>VSCode</span></div>
             <div class="techno-container"><i class="techno-icon devicon-gimp-plain"></i> <br/> <span>Gimp</span></div>
-            <div class="techno-container"><i class="techno-icon devicon-typescript-plain"></i> <br/> <span>Typescript</span></div>
         </div>
     </div>
 </template>
@@ -46,11 +50,10 @@
     }
 
     .techno-container span {
-        font-height: bold;
+        height: bold;
     }
 
     .techno-container:hover {
-        tranform: rotate(15deg);
         color: var(--vt-c-custom-text-2);
     }
 
@@ -62,7 +65,6 @@
 
     .techno-icon:hover {
         color: var(--vt-c-custom-text-2);
-        tranform: rotate(15deg);
     }
 
     @media screen and (max-width: 905px) {
