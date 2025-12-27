@@ -17,7 +17,7 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
 
 <template>
   <section class="infos-supp fade-in">
-    <h2 class="text-highlight-1 section-title">Informations supplémentaires</h2>
+    <h2 class="text-highlight-1 section-title">Profil & Intérêts</h2>
 
     <!-- Voyages longue durée -->
     <div class="info-block">
