@@ -5,10 +5,12 @@
 
 <template>
     <div id="top-line">
-        <img id="profile-img" src="../assets/me.png" alt="me" width="270px" height="340px" />
+        <img id="profile-img" src="../assets/photo5.png" alt="me" width="340px" height="340px" />
         <div id="line">
-            <p>Je suis <span class="text-highlight-1">Julie TOLVE</span>, <br/>
-                    Développeuse Web.</p>
+            <p><span class="text-highlight-1"></span><br/>
+                    Spécialisée en Vus.js et Python, je développe des applications fiables et évolutives.<br>
+                    J'accorde une attention particulière à la structure du code, à la maintenabilité et à l'expérience utilisateur.<br>
+                    Chaque projet est conçu avec une approche rigoureuse et orientée vers des solutions concrètes.</p>
             <div id="social">
                 <a href="https://www.linkedin.com/in/julie-tolve/" target="_blank">
                     <img class="social-img linkedin-img" src="../assets/in.png" alt="linkedin"/> 
@@ -41,9 +43,9 @@
     }
 
     #top-line p {
-        font-size: 42px;
+        font-size: 21px;
         line-height: 60px;
-    }
+    } 
 
     #top-line p span {
         font-weight: bold; 
