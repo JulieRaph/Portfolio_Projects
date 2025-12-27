@@ -4,7 +4,7 @@
 
 <template>
     <div id="about-me">
-        <h2 class="text-highlight-1 section-title">A propos</h2>
+        <h2 class="text-highlight-1 section-title">À propos</h2>
         <p>
             <span class="text-highlight-2">Développeuse web indépendante</span> spécialisée dans la création web et mobiles.<br>
             Issue d'une reconversion professionnelle débutée en 2024, j'ai construit mes compétences à travers des projets concrets,<br> en autonomie
