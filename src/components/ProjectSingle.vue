@@ -82,7 +82,7 @@
 
     .project .left h3 {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 32px;
         margin-bottom: 10px;
     }
 
@@ -103,17 +103,20 @@
         margin-right: 12px;
         border-radius: 5px;
         font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: var(--vt-c-custom-text-2);
     }
 
     .project .right .description {
         clear: both;
         margin-top: 80px;
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .project .right .tasks {
         margin-top: 20px;
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .reverse {
