@@ -12,11 +12,11 @@
                     J'accorde une attention particulière à la structure du code, à la maintenabilité et à l'expérience utilisateur.<br>
                     Chaque projet est conçu avec une approche rigoureuse et orientée vers des solutions concrètes.</p>
             <div id="social">
-                <a href="https://www.linkedin.com/in/julie-tolve/" target="_blank">
-                    <img class="social-img linkedin-img" src="../assets/in.png" alt="linkedin"/> 
-                </a>
                 <a href="https://github.com/JulieRaph/" target="_blank">
                     <img class="social-img github-img" src="../assets/github.png" alt="github"/> 
+                </a>
+                <a href="https://www.linkedin.com/in/julie-tolve/" target="_blank">
+                    <img class="social-img linkedin-img" src="../assets/in.png" alt="linkedin"/> 
                 </a>
             </div>
         </div>
@@ -27,7 +27,9 @@
     #top-line {
         margin-top: 50px;
         width: 100%;
-        height: 300px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
     }
 
     #top-line #profile-img {
@@ -37,14 +39,13 @@
     }
 
     #top-line #line {
-        float: left;
-        transform: translateY(40%);
-        text-align: center;
+        flex: 1;
     }
 
     #top-line p {
-        font-size: 21px;
-        line-height: 60px;
+        font-size: 19px;
+        line-height: 1.5;
+        margin: 0 0 30px 0;
     } 
 
     #top-line p span {
@@ -52,7 +53,7 @@
     }
 
     #social {
-        margin-top: 15px;
+        margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: left;
