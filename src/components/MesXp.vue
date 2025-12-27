@@ -7,7 +7,7 @@ let activeBloc = ref(0)
 let experiences = ref([
 {
     title: "Conceptrice et Développeuse Web et Application",
-    date: "De 2024 à 2025",
+    date: "De 2024 à aujourd'hui",
     line1: "Création d'un site communautaire d'évènements ciblés : Python, Flask, API RESTFul, MySql, Vue.js",
     line2: "Création d'un site de location de logements : Python, Flask, API, Javascript, HTML, CSS",
     line3: "Création personnalisée de la commande 'printf' avec gestion des specifiers en Langage C",
