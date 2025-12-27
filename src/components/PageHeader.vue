@@ -6,8 +6,8 @@
 <template>
     <div class="header-container">
         <div class="header-line"></div>
-        <h1 class="text-highlight-1">Bienvenue sur mon site professionnel.<br>
-            Je vous invite à découvrir mon parcours, mes compétences et mes réalisations.</h1>
+        <h1 class="text-highlight-1">Julie TOLVE<br>
+            Développeuse Web & Applications</h1>
         <div class="header-line"></div>
     </div>
 </template>
@@ -28,6 +28,7 @@
 
     h1 {
         text-align: center;
+        font-weight: bold;
         margin: 30px auto;
         max-width: 800px;
         line-height: 1.4;
