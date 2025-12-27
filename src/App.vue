@@ -9,7 +9,7 @@
     <PageHeader />
   </header>
   <main>
-    <RouterView/>
+    <RouterView />
   </main>
 </template>
 
