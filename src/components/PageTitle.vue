@@ -8,7 +8,7 @@
         <img id="profile-img" src="../assets/photo5.png" alt="me" width="340px" height="340px" />
         <div id="line">
             <p><span class="text-highlight-1"></span><br/>
-                    Spécialisée en Vus.js et Python, je développe des applications fiables et évolutives.<br>
+                    Spécialisée en Vue.js et Python, je développe des applications fiables et évolutives.<br>
                     J'accorde une attention particulière à la structure du code, à la maintenabilité et à l'expérience utilisateur.<br>
                     Chaque projet est conçu avec une approche rigoureuse et orientée vers des solutions concrètes.</p>
             <div id="social">
