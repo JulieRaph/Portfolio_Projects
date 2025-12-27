@@ -4,15 +4,16 @@
 
 <template>
     <div id="about-me">
-        <h2 class="text-highlight-1 section-title">Qui suis-je ?</h2>
+        <h2 class="text-highlight-1 section-title">A propos</h2>
         <p>
-            Je suis Julie Tolve, <span class="text-highlight-2">développeuse web</span> passionnée par la création d'applications web et mobiles. 
-            J'ai commencé mon parcours dans le développement en 2024 et depuis, je continue de me former et d'acquérir de nouvelles compétences dans l'objectif d'une solide expérience 
-            dans la création de sites web dynamiques et interactifs.
-            J'ai travaillé sur divers projets, allant de la reproduction d'un site de location de logements tel que Airbnb, mais également dans 
-            la création de mon premier site communautaire ciblé que je déploie et maintient pour une interface utilisateur exceptionnelle et fluide.
-            Mon expertise couvre une variété de technologies, notamment <span class="text-highlight-2">Python, Flask, HTML, CSS, JavaScript, Vue.js et Node.js</span>.
-            Je suis toujours à la recherche de nouveaux défis et d'opportunités pour apprendre et grandir en tant que développeuse.
+            <span class="text-highlight-2">Développeuse web indépendante</span> spécialisée dans la création web et mobiles.<br>
+            Issue d'une reconversion professionnelle débutée en 2024, j'ai construit mes compétences à travers des projets concrets,<br> en autonomie
+            comme en équipe, en couvrant l'ensemble du cycle de développement : conception, développement,<br> déploiement et maintenance.
+            J'ai notamment travaillé sur des applications web complexes, telle qu'une plateforme de<br> location de logements inspirée d'Airbnb, ainsi
+            que sur la création d'un site communautaire que je développe et maintiens actuellement.<br>
+            Aujourd'hui, j'accompagne les entreprises, startups et porteurs de projets dans la réalisation de solutions web
+            adaptées à leurs besoins,<br> avec une attention particulière portée à la clarté des fonctionnalités et à la pérennité des projets.<br>
+            Disponible pour de nouvelles missions, je m'inscris dans une démarche professionnelle, structurée et orientée résultats.
         </p>
 
         <div class="contact-links">
@@ -21,9 +22,6 @@
             </div>
             <div class="card">
                 <p><RouterLink to="/contact/2">Certifications</RouterLink></p>
-            </div>
-            <div class="card">
-                <p><RouterLink to="/contact/3">Liens</RouterLink></p>
             </div>
         </div>
     </div>
@@ -62,12 +60,12 @@
 
     .card:hover {
         background: rgba(255, 255, 255, 0.1);
-        border-color: var(--vt-c-custom-text-1);
+        border-color: var(--vt-c-custom-text-2);
         transform: translateY(-2px);
     }
 
     .card a {
-        color: var(--vt-c-custom-text-1);
+        color: var(--vt-c-custom-text-2);
         text-decoration: none;
         font-weight: bold;
         font-size: 16px;
@@ -76,7 +74,7 @@
     }
 
     .card:hover a {
-        color: var(--vt-c-custom-text-1);
+        color: var(--vt-c-custom-text-2);
         text-decoration: underline;
     }
 
