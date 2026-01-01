@@ -23,6 +23,9 @@
             <div class="card">
                 <p><RouterLink to="/contact/2">Certifications</RouterLink></p>
             </div>
+            <div class="card">
+                <p><RouterLink to="/contact/3">CV complet</RouterLink></p>
+            </div>
         </div>
     </div>
 </template>
