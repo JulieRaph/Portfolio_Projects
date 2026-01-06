@@ -102,7 +102,7 @@ const validateField = (fieldName) => {
     switch (fieldName) {
         case 'name':
             if (formData.name.trim().length < 2) {
-                errors.name = 'Le nom doit contenir au moins 2 caractères';
+                errors.name = 'Merci de renseigner votre nom';
             }
             break;
         case 'email':
@@ -113,12 +113,12 @@ const validateField = (fieldName) => {
             break;
         case 'subject':
             if (formData.subject.trim().length < 3) {
-                errors.subject = 'Le sujet doit contenir au moins 3 caractères';
+                errors.subject = 'Merci de donner un titre à votre demande';
             }
             break;
         case 'message':
             if (formData.message.trim().length < 10) {
-                errors.message = 'Le message doit contenir au moins 10 caractères';
+                errors.message = 'Merci de me décrire votre demande';
             }
             break;
     }
