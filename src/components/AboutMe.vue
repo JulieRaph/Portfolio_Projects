@@ -18,13 +18,13 @@
 
         <div class="contact-links">
             <div class="card">
-                <p><RouterLink to="/contact/1">Contactez moi</RouterLink></p>
+                <p><RouterLink to="/contact">Contactez moi</RouterLink></p>
             </div>
             <div class="card">
-                <p><RouterLink to="/contact/2">Certifications</RouterLink></p>
+                <p><RouterLink to="/certifications">Certifications</RouterLink></p>
             </div>
             <div class="card">
-                <p><RouterLink to="/contact/3">CV complet</RouterLink></p>
+                <p><RouterLink to="/cv">CV complet</RouterLink></p>
             </div>
         </div>
     </div>
