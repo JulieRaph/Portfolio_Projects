@@ -112,3 +112,23 @@ body {
     text-underline-offset: 10px;
     margin-bottom: 20px;
 }
+
+a {
+    color: var(--vt-c-custom-text-2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+a:link,
+a:visited {
+    color: var(--vt-c-custom-text-2); 
+}
+
+a:hover {
+    color: var(--vt-c-custom-text-1);
+}
+
+a:active {
+    color: var(--vt-c-custom-text-2);
+}
