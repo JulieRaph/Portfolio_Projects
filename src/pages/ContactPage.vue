@@ -11,8 +11,6 @@
     />
 
     <ContactForm
-        :emailjs-config="emailjsConfig"
-        use-captcha
         @submit-success="handleSuccess"
         @submit-error="handleError"
     />
@@ -26,12 +24,6 @@ import { ref } from 'vue';
 import ContactHeader from '@/components/ContactHeader.vue';
 import ContactStatus from '@/components/ContactStatus.vue';
 import ContactForm from '@/components/ContactForm.vue';
-
-const emailjsConfig = {
-    serviceId: '',
-    templateId: '',
-    publicKey: ''
-};
 
 const statusMessage = ref('');
 const statusType = ref('info');
