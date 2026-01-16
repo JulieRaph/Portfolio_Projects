@@ -17,7 +17,7 @@
         @submit-error="handleError"
     />
 
-    <RouterLink to="/">Retour à l'accueil</RouterLink>
+    <RouterLink to="/">← Retour à l'accueil</RouterLink>
 </template>
 
 <script setup>
