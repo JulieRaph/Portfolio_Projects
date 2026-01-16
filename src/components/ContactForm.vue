@@ -34,7 +34,7 @@
             type="text"
             id="subject"
             v-model="formData.subject"
-            placeholder="Object de votre message"
+            placeholder="Objet de votre message"
             required
             :disabled="isSubmitting"
             @blur="validateField('subject')"
@@ -50,11 +50,22 @@
                 placeholder="Décrivez votre projet ou votre demande..."
                 rows="8"
                 required
+                maxlength="5000"
                 :disabled="isSubmitting"
                 @blur="validateField('message')"
             ></textarea>
             <span v-if="errors.message" class="error-message">{{ errors.message }}</span>
         </div>
+
+        <!-- Honeypot invisible (anti-bot) -->
+        <input
+            type="text"
+            v-model="honeypot"
+            name="website"
+            style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+            tabindex="-1"
+            autocomplete="off"
+        />
 
         <button
             type="submit"
@@ -69,14 +80,6 @@
 
 <script setup>
     import { reactive, ref } from 'vue';
-    import emailjs from '@emailjs/browser';
-
-const props = defineProps({
-    emailjsConfig: {
-        type: Object,
-        required: true,
-    }
-});
 
 const emit = defineEmits(['submit-success', 'submit-error']);
 
@@ -94,7 +97,11 @@ const errors = reactive({
     message: ''
 });
 
+const honeypot = ref('');
 const isSubmitting = ref(false);
+const lastSubmitTime = ref(0);
+
+const COOLDOWN = 60000; // 1 minute entre deux envois
 
 const validateField = (fieldName) => {
     errors[fieldName] = '';
@@ -119,6 +126,8 @@ const validateField = (fieldName) => {
         case 'message':
             if (formData.message.trim().length < 10) {
                 errors.message = 'Merci de me décrire votre demande';
+            } else if (formData.message.length > 5000) {
+                errors.message = 'Message trop long (maximum 5000 caractères)';
             }
             break;
     }
@@ -152,7 +161,21 @@ const resetForm = () => {
 
 // Soumission du formulaire
 const handleSubmit = async () => {
-    // Valider le formulaire
+    // 1. Protection honeypot (anti-bot)
+    if (honeypot.value !== '') {
+        console.log('Bot détecté via honeypot');
+        return;
+    }
+
+    // 2. Protection throttling (limite de fréquence)
+    const now = Date.now();
+    if (now - lastSubmitTime.value < COOLDOWN) {
+        const remaining = Math.ceil((COOLDOWN - (now - lastSubmitTime.value)) / 1000);
+        emit('submit-error', `⏱️ Veuillez attendre ${remaining} secondes avant de renvoyer`);
+        return;
+    }
+
+    // 3. Valider le formulaire
     if (!validateForm()) {
         emit('submit-error', 'Veuillez corriger les erreurs dans le formulaire');
         return;
@@ -161,28 +184,35 @@ const handleSubmit = async () => {
     isSubmitting.value = true;
 
     try {
-        // Paramètres à envoyer à EmailJS
-        const templateParams = {
-            from_name: formData.name,
-            from_email: formData.email,
-            subject: formData.subject,
-            message: formData.message
-        };
-        const response = await emailjs.send(
-            props.emailjsConfig.serviceId,
-            props.emailjsConfig.templateId,
-            templateParams,
-            props.emailjsConfig.publicKey
-        );
+        // Prépare le message complet avec le sujet
+        const fullMessage = `Sujet: ${formData.subject}\n\n${formData.message}`;
 
-        if (response.status === 200) {
+        const response = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                from_name: formData.name,
+                from_email: formData.email,
+                message: fullMessage
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
             // Succès !
-            emit('submit-success', 'Message envoyé avec succès ! Je vous répondrai rapidement.');
+            emit('submit-success', '✅ Message envoyé avec succès ! Je vous répondrai rapidement.');
             resetForm();
+            lastSubmitTime.value = now;
+        } else {
+            emit('submit-error', `❌ ${data.error || 'Erreur lors de l\'envoi'}`);
         }
+
     } catch (error) {
-        console.error('Erreur EmailJS:', error);
-        emit('submit-error', 'Une erreur est survenue. Veuillez réessayer plus tard.');
+        console.error('Erreur réseau:', error);
+        emit('submit-error', '❌ Erreur de connexion. Veuillez réessayer plus tard.');
     } finally {
         isSubmitting.value = false;
     }
