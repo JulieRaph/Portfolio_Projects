@@ -159,6 +159,13 @@ const resetForm = () => {
     errors.message = '';
 };
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Animation fluide
+    });
+};
+
 // Soumission du formulaire
 const handleSubmit = async () => {
     // 1. Protection honeypot (anti-bot)
@@ -172,12 +179,14 @@ const handleSubmit = async () => {
     if (now - lastSubmitTime.value < COOLDOWN) {
         const remaining = Math.ceil((COOLDOWN - (now - lastSubmitTime.value)) / 1000);
         emit('submit-error', `⏱️ Veuillez attendre ${remaining} secondes avant de renvoyer`);
+        scrollToTop(); // remonte la page vers le haut
         return;
     }
 
     // 3. Valider le formulaire
     if (!validateForm()) {
         emit('submit-error', 'Veuillez corriger les erreurs dans le formulaire');
+        scrollToTop();
         return;
     }
 
@@ -206,13 +215,16 @@ const handleSubmit = async () => {
             emit('submit-success', '✅ Message envoyé avec succès ! Je vous répondrai rapidement.');
             resetForm();
             lastSubmitTime.value = now;
+            scrollToTop();
         } else {
             emit('submit-error', `❌ ${data.error || 'Erreur lors de l\'envoi'}`);
+            scrollToTop();
         }
 
     } catch (error) {
         console.error('Erreur réseau:', error);
         emit('submit-error', '❌ Erreur de connexion. Veuillez réessayer plus tard.');
+        scrollToTop();
     } finally {
         isSubmitting.value = false;
     }
