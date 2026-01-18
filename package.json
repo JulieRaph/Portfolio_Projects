@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/nodejs": "^5.0.2",
     "dotenv": "^17.2.3",
+    "nodemailer": "^7.0.12",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   },
