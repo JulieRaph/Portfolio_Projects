@@ -32,3 +32,6 @@ coverage
 
 # Local Netlify folder
 .netlify
+
+# Deno (inutile pour le projet node.js)
+deno.lock
