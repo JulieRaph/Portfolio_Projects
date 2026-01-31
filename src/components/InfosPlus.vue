@@ -64,6 +64,7 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
                     :src="`/assets/flags/${flag}.svg`"
                     alt=""
                     aria-hidden="true"
+                    loading="lazy"
                     class="flag-icon-animated"
                 />
             </div>
@@ -74,6 +75,7 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
                     :src="`/assets/flags/${flag}.svg`"
                     alt=""
                     aria-hidden="true"
+                    loading="lazy"
                     class="flag-icon-animated"
                 />
             </div>
