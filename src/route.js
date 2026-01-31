@@ -1,11 +1,27 @@
-import CertificationsPage from "./pages/CertificationsPage.vue";
-import ContactPage from "./pages/ContactPage.vue";
-import CVPage from "./pages/CVPage.vue";
-import PortfolioMain from "./pages/PortfolioMain.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+
+const PortfolioMain = () => import('./pages/PortfolioMain.vue')
+const CVPage = () => import('./pages/CVPage.vue')
+const ContactPage = () => import('./pages/ContactPage.vue')
+const CertificationsPage = () => import('./pages/CertificationsPage.vue')
 
 export const routes = [
-    {path: "/", component: PortfolioMain},
-    {path: "/contact", component: ContactPage},
-    {path: "/certifications", component: CertificationsPage},
-    {path: "/cv", component: CVPage},
+    { path: "/", name: 'home', component: PortfolioMain },
+    { path: "/contact", name: 'contact', component: ContactPage },
+    { path: "/certifications", name: 'certifications', component: CertificationsPage },
+    { path: "/cv", name: 'cv', component: CVPage },
 ]
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { top: 0 }
+        }
+    }
+})
+
+export default router
