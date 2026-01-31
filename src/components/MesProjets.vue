@@ -6,6 +6,7 @@
         {
             name: "WeRidUp",
             image: "/assets/projects/project.png",
+            altText: "Logo du projet WeRidUp - Application communautaire pour motards avec évènements et messagerie",
             tags: "Vue.js;Typescript;API RESTFul;Flask;MySql;Python",
             description: "Création d'un site communautaire avec évènements pour les motards, incluant la conception d’une API REST et la gestion des données",
             tasks: "Création du backend en Flask API REST, sur Python via VSCode;Création de la partie Frontend en Vue.js;Création d'une messagerie en temps réel entre les utilisateurs"
@@ -13,6 +14,7 @@
          {
             name: "HBnb",
             image: "/assets/projects/airbnb-logo.svg",
+            altText: "Logo du projet HBnb - Application de locations de logement type Airbnb",
             tags: "Javascript;HTML;CSS;API RESTFul;Flask;Python",
             description: "Développement d'une application de location de logements, avec gestion des fonctionnalités côté serveur et interface utilisateur",
             tasks: "Création du backend en Flask API REST, sur Python via VSCode;Création de la partie Frontend en HTML, CSS et Javascript"
@@ -20,6 +22,7 @@
          {
             name: "Simple Shell",
             image: "/assets/projects/shell.png",
+            altText: "Logo du projet Simple Shell - Interpréteur de commandes développé en langage C.", 
             tags: "Langage C",
             description: "Réalisation d'un interpréteur de commandes en Langage C, avec gestion avancée des spécificateurs",
             tasks: "Création du nouvel interpréteur de commandes: En équipe de 2 personnes et en Méthodologie Agile"
