@@ -12,7 +12,8 @@
                 <div class="image-container">
                     <img
                         src="/certifications/certification-agile.jpg"
-                        alt="Certification AGILE"
+                        alt="Certification en méthodologie AGILE obtenue par Julie Tolve"
+                        loading="lazy"
                     />
                 </div>
             </div>
@@ -23,7 +24,8 @@
                 <div class="image-container">
                     <img
                         src="/certifications/certification-cloud.jpg"
-                        alt="Certification CLOUD"
+                        alt="Certification en CLOUD Computing obtenue par Julie Tolve"
+                        loading="lazy"
                     />
                 </div>
             </div>
@@ -34,7 +36,8 @@
                 <div class="image-container">
                     <img
                         src="/certifications/certification-cybersecurity.jpg"
-                        alt="Certification CYBERSECURITY"
+                        alt="Certification en CYBERSECURITY obtenu par Julie Tolve"
+                        loading="lazy"
                     />
                 </div>
             </div>
