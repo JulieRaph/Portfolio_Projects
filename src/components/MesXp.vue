@@ -15,7 +15,7 @@ let experiences = ref([
 },
 {
     title: "Assistante de Programmes / Direction",
-    date: "De 2021 à 2024",
+    date: "De 2021 à aujourd'hui",
     line1: "Suivi administratif et juridique des opérations immobilières, garantissant conformité",
     line2: "Coordination avec les concessionnaires et tous corps d'état pour assurer la bonne réalisation des projets",
     line3: "Gestion comptable et suivi budgétaire précis",
