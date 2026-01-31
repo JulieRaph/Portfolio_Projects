@@ -1,4 +1,10 @@
 <script setup>
+const langues = [
+  { nom: "Français", niveau: "Langue maternelle", emoji: "🇫🇷" },
+  { nom: "Anglais", niveau: "Intermédiaire", emoji: "🇬🇧" },
+  { nom: "Espagnol", niveau: "Notions", emoji: "🇪🇸" }
+]
+
 const voyages = [
   { pays: "Amérique du Sud", drapeaux: ["colombia", "argentina", "chile", "peru", "bolivia", "uruguay"] },
   { pays: "Amérique centrale", drapeaux: ["costa-rica", "panama"] },
@@ -7,9 +13,9 @@ const voyages = [
 ]
 
 const interets = [
-  "Randonnée (Pyrénées)",
-  "Sports d’endurance",
-  "Lecture – romans policiers et thrillers"
+  "Moto 🏍️",
+  "Voyages ✈️",
+  "Randonnée - Activité Nature",
 ]
 
 const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
@@ -19,6 +25,16 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
   <section class="infos-supp fade-in">
     <h2 class="text-highlight-1 section-title">Profil & Intérêts</h2>
 
+    <div class="info-block">
+      <h3>Langues</h3>
+      <ul>
+        <li v-for="(langue, index) in langues" :key="index" class="langue-item">
+          <span class="flag-emoji">{{ langue.emoji }}</span>
+          <span class="langue-nom">{{ langue.nom }}</span>
+          <span class="langue-niveau">{{ langue.niveau }}</span>
+        </li>
+      </ul>
+    </div>
     <!-- Voyages longue durée -->
     <div class="info-block">
       <h3>Voyages longue durée</h3>
@@ -46,7 +62,8 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
                     v-for="(flag, index) in tousLesdrapeaux"
                     :key="`first-${index}`"
                     :src="`/assets/flags/${flag}.svg`"
-                    :alt="flag"
+                    alt=""
+                    aria-hidden="true"
                     class="flag-icon-animated"
                 />
             </div>
@@ -55,7 +72,8 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
                     v-for="(flag, index) in tousLesdrapeaux"
                     :key="`second-${index}`"
                     :src="`/assets/flags/${flag}.svg`"
-                    :alt="flag"
+                    alt=""
+                    aria-hidden="true"
                     class="flag-icon-animated"
                 />
             </div>
@@ -85,6 +103,33 @@ const tousLesdrapeaux = voyages.flatMap(voyage => voyage.drapeaux || []);
   color: var(--vt-c-custom-text-2);
   margin-bottom: 0.8rem;
   font-weight: 600;
+}
+
+.langue-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem 0;
+  padding: 0.6rem 0;
+  color: var(--vt-c-custom-text-normal);
+  font-size: 18px;
+}
+
+.flag-emoji {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.langue-nom {
+  font-weight: 400;
+  min-width: 100px;
+  color: var(--vt-c-custom-text-1);
+}
+
+.langue-niveau {
+  color: var(--vt-c-custom-text-2);
+  font-style: italic;
 }
 
 .voyage-item, .interet-item {
