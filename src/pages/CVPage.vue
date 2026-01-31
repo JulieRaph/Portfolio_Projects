@@ -24,6 +24,7 @@
                     <img
                         src="/cv/cv-julie.jpg"
                         alt="Curriculum Vitae de Julie Tolve - Développeuse Web & Applications - Expérience et compétences techniques"
+                        loading="lazy"
                     />
                 </div>
             </div>
