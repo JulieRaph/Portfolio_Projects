@@ -54,17 +54,17 @@
     <div class="project">
         <div class="left fade-in" :class="reverse ? 'reverse' : ''">
             <h3 class="text-highlight-1">{{ project.name }}</h3>
-            <a :href="project.image" target="_blank">
-                <img :src="project.image" alt="project.name">
+            <a :href="project.image" target="_blank" rel="noopener noreferrer">
+                <img :src="project.image" :alt="project.altText || `Logo du projet ${project.name}`">
             </a>
         </div>
         <div class="right fade-in">
-            <p class="tag" v-for="tag in getProjectTags()">{{ tag }}</p>
+            <p class="tag" v-for="tag in getProjectTags()" :key="tag">{{ tag }}</p>
             <p class="description">
                 {{ project.description }}
             </p>
             <p class="tasks">
-                <span v-for="task in getProjectTasks()"><span class="text-highlight-2">▶</span> {{ task }}<br/></span>
+                <span v-for="(task, index) in getProjectTasks()" :key="index"><span class="text-highlight-2">▶</span> {{ task }}<br/></span>
             </p>
         </div>
     </div>
