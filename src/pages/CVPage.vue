@@ -2,7 +2,9 @@
     <div class="cv-page">
         <div class="header">
             <h1 class="text-highlight-1">Mon CV Complet</h1>
-            <RouterLink to="/" class="back-link-top">← Retour à l'accueil</RouterLink>
+            <RouterLink to="/" class="back-link-top" aria-label="Retourner à la page d'accueil du portfolio">
+                ← Retour à l'accueil
+            </RouterLink>
         </div>
 
         <div class="cv-container">
@@ -10,8 +12,9 @@
                 <div class="cv-actions">
                     <a
                         href="/cv/cv-julie.pdf"
-                        download="CV-Julie-Developpeur-Web.pdf"
+                        download="CV-Julie-Developpeuse-Web-Applications.pdf"
                         class="download-btn"
+                        aria-label="Télécharger le CV de Julie Tolve au format PDF (environ 500 Ko)"
                     >
                         📥 Télécharger mon CV
                     </a>
@@ -20,7 +23,7 @@
                 <div class="image-container">
                     <img
                         src="/cv/cv-julie.jpg"
-                        alt="CV Julie - Développeur Web"
+                        alt="Curriculum Vitae de Julie Tolve - Développeuse Web & Applications - Expérience et compétences techniques"
                     />
                 </div>
             </div>
