@@ -1,0 +1,8 @@
+# Robots.txt pour julietolve.com
+# Autoriser tous les robots à indexer tout le site
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://julietolve.com/sitemap.xml
