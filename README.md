@@ -171,7 +171,7 @@ Le site est déployé automatiquement sur **Netlify** via intégration Git.
 - 🌐 Portfolio : [julietolve.com](https://julietolve.com)
 - 💼 LinkedIn : [linkedin.com/in/julie-tolve](https://linkedin.com/in/julie-tolve)
 - 📧 Email : Pas d'adresse mail dévoilée ici
-- 🐙 GitHub : [github.com/[ton-username]](https://github.com/JulieRaph)
+    - 🐙 GitHub : [github.com/JulieRaph](https://github.com/JulieRaph)
 
 ---
 
